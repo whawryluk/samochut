@@ -1,7 +1,7 @@
 import logging
 
-from .car_state_running import RunningState
-from .car_state_stopped import StoppedState
+from src.components.car_state_running import RunningState
+from src.components.car_state_stopped import StoppedState
 
 
 class Car:
@@ -34,3 +34,18 @@ class Car:
 
     def get_status(self):
         return self.state.get_status()
+
+    def to_dict(self):
+        return {
+            "car_id": self.car_id,
+            "engine_type": self.engine.__class__.__name__,
+            "transmission_type": self.transmission.__class__.__name__,
+            "engine_status": self.engine.get_status(),
+            "gear": self.transmission.get_gear()
+        }
+
+    def __repr__(self):
+        return (f"Car(id={self.car_id}, "
+                f"engine={self.engine.__class__.__name__}, "
+                f"transmission={self.transmission.__class__.__name__}, "
+                f"state={self.state.get_status()})")

@@ -1,7 +1,7 @@
 import pytest
 import logging
-from src.components.car import Car
-from src.config import setup_logging
+from backend.src.components.car import Car
+from backend.src.config import setup_logging
 
 setup_logging()
 

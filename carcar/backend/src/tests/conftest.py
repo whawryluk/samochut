@@ -1,10 +1,15 @@
+import sys
+import os
 import pytest
 
-from backend.src.app import app
-from src.components.engine import GasolineEngine, ElectricEngine, DieselEngine
-from src.components.transmission import ManualTransmission, AutomaticTransmission
-from src.factory.engine_factory import EngineFactory
-from src.factory.transmission_factory import TransmissionFactory
+# Add the src directory to the PYTHONPATH
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+from app import app
+from components.engine import GasolineEngine, ElectricEngine, DieselEngine
+from components.transmission import ManualTransmission, AutomaticTransmission
+from factory.engine_factory import EngineFactory
+from factory.transmission_factory import TransmissionFactory
 
 @pytest.fixture
 def client():

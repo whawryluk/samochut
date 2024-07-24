@@ -1,7 +1,7 @@
 import pytest
 
 from backend.src.factory.engine_factory import EngineFactory
-from src.factory.transmission_factory import TransmissionFactory
+from backend.src.factory.transmission_factory import TransmissionFactory
 
 
 @pytest.fixture

@@ -1,6 +1,5 @@
 from backend.src.components.engine import GasolineEngine, ElectricEngine, DieselEngine
 
-
 def test_gasoline_engine():
     engine = GasolineEngine()
     assert engine.get_status() == "stopped"

@@ -1,4 +1,4 @@
-from .car_state import CarState
+from src.components.car_state import CarState
 
 
 class RunningState(CarState):
@@ -10,6 +10,7 @@ class RunningState(CarState):
         if car.engine.get_status() == "running":
             car.engine.stop()
             car.set_state(car.stopped_state)
+            car.logger.info("Car stopped successfully.")
         else:
             car.logger.info("Cannot stop the car. The engine is already stopped.")
 

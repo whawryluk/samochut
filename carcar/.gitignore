@@ -102,8 +102,35 @@ __pypackages__/
 celerybeat-schedule
 celerybeat.pid
 
+# IDE settings
 .idea/
 
-/node_modules
+# Node modules
+node_modules/
+frontend/node_modules/
 
-/car_simulator.log
+# Log files
+*.log
+frontend/*.log
+car_simulator.log
+
+# Coverage reports
+coverage/
+coverage/*
+
+# Other
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# React stuff:
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/.cache
+
+# Docker stuff
+docker-compose.override.yml

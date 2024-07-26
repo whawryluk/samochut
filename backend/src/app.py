@@ -49,7 +49,8 @@ def create_car():
     cars[car_id] = currcarr
 
     return jsonify({
-        "message": f"Car {car_id} with {engine_type} engine and {transmission_type} transmission created"
+        "message": f"Car {car_id} with {engine_type.replace("Engine", "").lower()}"
+                   f" engine and {transmission_type.replace("Transmission", "").lower()} transmission created"
     }), 201
 
 

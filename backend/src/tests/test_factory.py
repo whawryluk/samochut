@@ -15,17 +15,17 @@ def transmission_factory():
 
 
 def test_create_gasoline_engine(engine_factory, gasoline_engine):
-    engine = engine_factory.create_engine("gasoline")
+    engine = engine_factory.create_engine("GasolineEngine")
     assert type(engine) is type(gasoline_engine)
 
 
 def test_create_electric_engine(engine_factory, electric_engine):
-    engine = engine_factory.create_engine("electric")
+    engine = engine_factory.create_engine("ElectricEngine")
     assert type(engine) is type(electric_engine)
 
 
 def test_create_diesel_engine(engine_factory, diesel_engine):
-    engine = engine_factory.create_engine("diesel")
+    engine = engine_factory.create_engine("DieselEngine")
     assert type(engine) is type(diesel_engine)
 
 
@@ -35,12 +35,12 @@ def test_create_unknown_engine(engine_factory):
 
 
 def test_create_manual_transmission(transmission_factory, manual_transmission):
-    transmission = transmission_factory.create_transmission("manual")
+    transmission = transmission_factory.create_transmission("ManualTransmission")
     assert type(transmission) is type(manual_transmission)
 
 
 def test_create_automatic_transmission(transmission_factory, automatic_transmission):
-    transmission = transmission_factory.create_transmission("automatic")
+    transmission = transmission_factory.create_transmission("AutomaticTransmission")
     assert type(transmission) is type(automatic_transmission)
 
 

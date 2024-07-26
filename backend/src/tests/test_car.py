@@ -7,8 +7,8 @@ setup_logging()
 
 
 @pytest.fixture
-def car():
-    return Car(car_id="test_car")
+def car(gasoline_engine, manual_transmission):
+    return Car(car_id="test_car", engine=gasoline_engine, transmission=manual_transmission)
 
 
 def test_initial_state(car):

@@ -5,7 +5,7 @@ import pytest
 # Add the src directory to the PYTHONPATH
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
-from app import app
+from src.app import app
 from components.engine import GasolineEngine, ElectricEngine, DieselEngine
 from components.transmission import ManualTransmission, AutomaticTransmission
 from factory.engine_factory import EngineFactory

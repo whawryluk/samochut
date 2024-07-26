@@ -96,4 +96,3 @@ jobs:
 
       - name: Deploy to Production
         run: echo "Deploying to production environment"
-        # Add deployment steps here, such as SSH into your server and pulling the new images

@@ -13,7 +13,7 @@ def test_create_car(client):
     response = client.post('/api/cars', json={
         "id": "1",
         "engine_type": "GasolineEngine",
-        "transmission_type": "ManualEngine"
+        "transmission_type": "ManualTransmission"
     })
     assert response.status_code == 201
     assert b"Car 1 with gasoline engine and manual transmission created" in response.data
@@ -23,7 +23,7 @@ def test_get_car(client):
     post_response = client.post('/api/cars', json={
         "id": "2",
         "engine_type": "GasolineEngine",
-        "transmission_type": "ManualEngine"
+        "transmission_type": "AutomaticTransmission"
     })
     print("POST Response data:", post_response.data)
     assert post_response.status_code == 201

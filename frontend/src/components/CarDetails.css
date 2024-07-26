@@ -1,0 +1,13 @@
+.control-button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  background-color: #0056b3;
+}
